@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ParticipantListViewController: UITableViewController {
+    
+    var participantList = [ParticipantList]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

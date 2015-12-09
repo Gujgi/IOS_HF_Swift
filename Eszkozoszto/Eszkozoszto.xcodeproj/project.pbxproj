@@ -15,6 +15,11 @@
 		E22E5C751C0F19CC00B1AF81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */; };
 		E22E5C801C0F19CC00B1AF81 /* EszkozosztoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */; };
 		E22E5C8B1C0F19CC00B1AF81 /* EszkozosztoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */; };
+		E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */; };
+		E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E791C17578B0064C981 /* ParticipantList.swift */; };
+		E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */; };
+		E2A08E7F1C17578B0064C981 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7B1C17578B0064C981 /* Participant.swift */; };
+		E2A08E811C1759250064C981 /* ParticipantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E801C1759250064C981 /* ParticipantListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		E22E5C861C0F19CC00B1AF81 /* EszkozosztoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EszkozosztoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EszkozosztoUITests.swift; sourceTree = "<group>"; };
 		E22E5C8C1C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParticipantList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2A08E791C17578B0064C981 /* ParticipantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantList.swift; sourceTree = "<group>"; };
+		E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Participant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E2A08E7B1C17578B0064C981 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		E2A08E801C1759250064C981 /* ParticipantListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,10 @@
 		E22E5C5B1C0F19CC00B1AF81 = {
 			isa = PBXGroup;
 			children = (
+				E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */,
+				E2A08E791C17578B0064C981 /* ParticipantList.swift */,
+				E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */,
+				E2A08E7B1C17578B0064C981 /* Participant.swift */,
 				E22E5C661C0F19CC00B1AF81 /* Eszkozoszto */,
 				E22E5C7E1C0F19CC00B1AF81 /* EszkozosztoTests */,
 				E22E5C891C0F19CC00B1AF81 /* EszkozosztoUITests */,
@@ -106,6 +120,7 @@
 				E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */,
 				E22E5C761C0F19CC00B1AF81 /* Info.plist */,
 				E22E5C6E1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld */,
+				E2A08E801C1759250064C981 /* ParticipantListViewController.swift */,
 			);
 			path = Eszkozoszto;
 			sourceTree = "<group>";
@@ -259,8 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A08E811C1759250064C981 /* ParticipantListViewController.swift in Sources */,
 				E22E5C701C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld in Sources */,
+				E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */,
+				E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */,
+				E2A08E7F1C17578B0064C981 /* Participant.swift in Sources */,
 				E22E5C6A1C0F19CC00B1AF81 /* ViewController.swift in Sources */,
+				E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */,
 				E22E5C681C0F19CC00B1AF81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +508,7 @@
 				E22E5C911C0F19CC00B1AF81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22E5C921C0F19CC00B1AF81 /* Build configuration list for PBXNativeTarget "EszkozosztoTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +517,7 @@
 				E22E5C941C0F19CC00B1AF81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E22E5C951C0F19CC00B1AF81 /* Build configuration list for PBXNativeTarget "EszkozosztoUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +526,7 @@
 				E22E5C971C0F19CC00B1AF81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

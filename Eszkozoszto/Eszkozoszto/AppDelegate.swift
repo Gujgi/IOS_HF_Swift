@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        
         let participantList = NSEntityDescription.insertNewObjectForEntityForName("ParticipantList",
             inManagedObjectContext: managedObjectContext) as NSManagedObject
         participantList.setValue("ParticipantList \(arc4random_uniform(10000))", forKey: "listName")
+
         
         let participant = NSEntityDescription.insertNewObjectForEntityForName("Participant",
             inManagedObjectContext: managedObjectContext) as NSManagedObject
@@ -28,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         participant.setValue("e-mail address", forKey: "plusData")
         participant.setValue(false, forKey: "right")
         participant.setValue(participantList, forKey: "list")
+        
         
         saveContext()
         
@@ -40,12 +43,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let content = participant.valueForKey("name") as! String
                     print(content)
                 }
+                let participantList = participant.valueForKey("list") as! NSManagedObject
+                print(participantList.valueForKey("listName") as! String)
             }
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
+        
         return true
+    }
+    
+    class var sharedAppDelegate: AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
     }
 
     func applicationWillResignActive(application: UIApplication) {
