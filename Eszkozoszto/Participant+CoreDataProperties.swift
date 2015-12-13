@@ -15,8 +15,8 @@ import CoreData
 extension Participant {
 
     @NSManaged var name: String?
-    @NSManaged var plusData: String?
-    @NSManaged var right: NSNumber?
+    @NSManaged var emailAddress: String?
+    @NSManaged var hasRight: NSNumber?
     @NSManaged var list: ParticipantList?
 
 }
