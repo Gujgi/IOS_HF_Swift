@@ -14,6 +14,9 @@
 		E22E5C751C0F19CC00B1AF81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */; };
 		E22E5C801C0F19CC00B1AF81 /* EszkozosztoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */; };
 		E22E5C8B1C0F19CC00B1AF81 /* EszkozosztoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */; };
+		E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */; };
+		E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EA1C1F80E4004B5449 /* MainModule.swift */; };
+		E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EC1C1F81C0004B5449 /* MainViewController.swift */; };
 		E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */; };
 		E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E791C17578B0064C981 /* ParticipantList.swift */; };
 		E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */; };
@@ -56,6 +59,9 @@
 		E22E5C861C0F19CC00B1AF81 /* EszkozosztoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EszkozosztoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EszkozosztoUITests.swift; sourceTree = "<group>"; };
 		E22E5C8C1C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSelectorTableViewController.swift; sourceTree = "<group>"; };
+		E234E1EA1C1F80E4004B5449 /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		E234E1EC1C1F81C0004B5449 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParticipantList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2A08E791C17578B0064C981 /* ParticipantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantList.swift; sourceTree = "<group>"; };
 		E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Participant+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -146,6 +152,16 @@
 			path = EszkozosztoUITests;
 			sourceTree = "<group>";
 		};
+		E234E1E91C1F7DEC004B5449 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E22E5C6B1C0F19CC00B1AF81 /* Main.storyboard */,
+				E234E1EC1C1F81C0004B5449 /* MainViewController.swift */,
+				E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		E2D7E02B1C1DBFD400EF6D8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +173,7 @@
 		E2D7E02C1C1DBFDD00EF6D8D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E234E1EA1C1F80E4004B5449 /* MainModule.swift */,
 				E2D7E02E1C1DC21700EF6D8D /* AppRootNavigator.swift */,
 				E2D7E0301C1DC2A700EF6D8D /* AppSessionHandler.swift */,
 				E22E5C6E1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld */,
@@ -184,8 +201,8 @@
 		E2D7E0361C1DCE2C00EF6D8D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E234E1E91C1F7DEC004B5449 /* Main */,
 				E2D7E0371C1DD49F00EF6D8D /* Login */,
-				E22E5C6B1C0F19CC00B1AF81 /* Main.storyboard */,
 				E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -333,6 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22E5C701C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld in Sources */,
+				E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */,
+				E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */,
 				E2D7E02F1C1DC21700EF6D8D /* AppRootNavigator.swift in Sources */,
 				E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */,
 				E2D7E0351C1DCC1F00EF6D8D /* SwiftyJSON.swift in Sources */,
@@ -341,6 +360,7 @@
 				E2D7E0311C1DC2A700EF6D8D /* AppSessionHandler.swift in Sources */,
 				E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */,
 				E2D7E03B1C1DD78F00EF6D8D /* LoginViewController.swift in Sources */,
+				E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */,
 				E22E5C681C0F19CC00B1AF81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

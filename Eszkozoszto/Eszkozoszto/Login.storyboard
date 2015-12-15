@@ -63,15 +63,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-bW-bvG">
+                                <rect key="frame" x="258" y="207" width="84" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kyj-Uq-YqM" firstAttribute="centerX" secondItem="dp7-0o-UlA" secondAttribute="centerX" id="0Tk-Gd-NAa"/>
+                            <constraint firstItem="cxq-bW-bvG" firstAttribute="centerX" secondItem="kyj-Uq-YqM" secondAttribute="centerX" id="Fkm-JM-VJL"/>
+                            <constraint firstItem="kyj-Uq-YqM" firstAttribute="top" secondItem="cxq-bW-bvG" secondAttribute="bottom" constant="8" id="w3X-b4-AaX"/>
                             <constraint firstItem="kyj-Uq-YqM" firstAttribute="centerY" secondItem="dp7-0o-UlA" secondAttribute="centerY" id="xZU-r3-2qy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="cxq-bW-bvG" id="soI-64-EQu"/>
                         <outlet property="passwordField" destination="gFC-Kh-q01" id="Rqf-CJ-vPK"/>
                         <outlet property="usernameField" destination="USW-Ob-CST" id="sOe-u1-kl8"/>
                     </connections>
