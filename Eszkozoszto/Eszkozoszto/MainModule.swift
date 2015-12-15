@@ -12,6 +12,7 @@ struct ConferenceEventData {
     var name : String!
     var id : String!
     //TODO: - expand if needed
+    var place : String!
     
     init(withJSON data: JSON)
     {
@@ -22,6 +23,7 @@ struct ConferenceEventData {
     {
         self.name = name
         self.id = "TODO"
+        self.place = "TODO"
     }
 }
 

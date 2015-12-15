@@ -8,19 +8,27 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBAction func logoutButtonTouchUpInside(sender: AnyObject)
+    {
+        AppSessionHandler.sharedInstance.logOut()
+    }
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         MainModule.sharedInstance.getEventsListWithCompletion{ (err: NSError?,data: [ConferenceEventData]?) -> Void in
             if let eventData = data where err == nil {
                 if eventData.count > 1 {
-                    self.performSegueWithIdentifier("retek", sender: self)
+                    self.performSegueWithIdentifier("conference_picker", sender: self)
                 }
             }
         }
     }
+
     
     //MARK: - Actions
     

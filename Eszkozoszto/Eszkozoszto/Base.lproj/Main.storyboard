@@ -14,14 +14,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableFooterView" contentMode="redraw" id="odC-bV-PfS">
+                        <searchBar key="tableFooterView" contentMode="redraw" id="R2S-d9-0n7">
                             <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="eKp-8K-d5j" id="HJO-Oh-gh6"/>
-                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" textLabel="CF3-sc-RJW" style="IBUITableViewCellStyleDefault" id="RGH-BD-N0L">
@@ -31,7 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CF3-sc-RJW">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Résztvevők:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CF3-sc-RJW">
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
@@ -59,7 +56,6 @@
                 <searchDisplayController id="eqt-5Z-pWz">
                     <connections>
                         <outlet property="delegate" destination="eKp-8K-d5j" id="s50-ta-ihn"/>
-                        <outlet property="searchBar" destination="odC-bV-PfS" id="Jtv-pp-eKJ"/>
                         <outlet property="searchContentsController" destination="eKp-8K-d5j" id="7zJ-Ps-hnH"/>
                         <outlet property="searchResultsDataSource" destination="eKp-8K-d5j" id="ZVp-kQ-dLX"/>
                         <outlet property="searchResultsDelegate" destination="eKp-8K-d5j" id="LJ7-2o-NGo"/>
@@ -68,17 +64,17 @@
             </objects>
             <point key="canvasLocation" x="1192" y="-281"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Event Selector Table View Controller-->
         <scene sceneID="q7f-Jr-K3j">
             <objects>
-                <tableViewController modalPresentationStyle="formSheet" id="dLQ-rV-J7T" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="formSheet" id="dLQ-rV-J7T" customClass="EventSelectorTableViewController" customModule="Eszkozoszto" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KDF-MS-40g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lmK-46-0rE" detailTextLabel="YGa-OQ-Eft" style="IBUITableViewCellStyleValue1" id="94Q-PW-s8I">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConferenceCell" textLabel="lmK-46-0rE" style="IBUITableViewCellStyleDefault" id="94Q-PW-s8I">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="94Q-PW-s8I" id="tIM-Ez-qvm">
@@ -86,19 +82,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lmK-46-0rE">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YGa-OQ-Eft">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -136,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="436" y="-844"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="S2K-9c-dn5">
             <objects>
-                <viewController id="x6V-iL-yHL" sceneMemberID="viewController">
+                <viewController id="x6V-iL-yHL" customClass="MainViewController" customModule="Eszkozoszto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hPr-Pg-Ebs"/>
                         <viewControllerLayoutGuide type="bottom" id="f4X-NT-ixY"/>
@@ -172,11 +160,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonTouchUpInside:" destination="x6V-iL-yHL" eventType="touchUpInside" id="nhQ-JA-wxz"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="dLQ-rV-J7T" kind="presentation" modalPresentationStyle="formSheet" id="96e-ff-cjA"/>
+                        <segue destination="dLQ-rV-J7T" kind="presentation" identifier="conference_picker" modalPresentationStyle="formSheet" id="96e-ff-cjA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMJ-Qx-pfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
