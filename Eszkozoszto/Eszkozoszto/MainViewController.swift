@@ -27,6 +27,10 @@ class MainViewController: UIViewController
                 }
             }
         }
+        
+        MainModule.sharedInstance.getParticipantListWithCompletion { (err :NSError?,data:[ParticipantData]?) -> Void in
+            //
+        }
     }
 
     

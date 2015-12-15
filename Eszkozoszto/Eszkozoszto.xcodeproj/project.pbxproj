@@ -17,6 +17,7 @@
 		E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */; };
 		E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EA1C1F80E4004B5449 /* MainModule.swift */; };
 		E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EC1C1F81C0004B5449 /* MainViewController.swift */; };
+		E234E1EF1C2073B0004B5449 /* ParticipantListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */; };
 		E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */; };
 		E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E791C17578B0064C981 /* ParticipantList.swift */; };
 		E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */; };
@@ -62,6 +63,7 @@
 		E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSelectorTableViewController.swift; sourceTree = "<group>"; };
 		E234E1EA1C1F80E4004B5449 /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		E234E1EC1C1F81C0004B5449 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantListTableViewController.swift; sourceTree = "<group>"; };
 		E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParticipantList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E2A08E791C17578B0064C981 /* ParticipantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantList.swift; sourceTree = "<group>"; };
 		E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Participant+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				E22E5C6B1C0F19CC00B1AF81 /* Main.storyboard */,
 				E234E1EC1C1F81C0004B5449 /* MainViewController.swift */,
 				E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */,
+				E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				E22E5C701C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld in Sources */,
 				E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */,
 				E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */,
+				E234E1EF1C2073B0004B5449 /* ParticipantListTableViewController.swift in Sources */,
 				E2D7E02F1C1DC21700EF6D8D /* AppRootNavigator.swift in Sources */,
 				E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */,
 				E2D7E0351C1DCC1F00EF6D8D /* SwiftyJSON.swift in Sources */,
