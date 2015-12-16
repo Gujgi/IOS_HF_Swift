@@ -8,61 +8,79 @@
 
 import UIKit
 
-class ParticipantListTableViewController: UITableViewController {
-    
+class ParticipantListTableViewController: UITableViewController, UISearchResultsUpdating, ParticipantDataFetchListener
+{
+        
+    var filteredParticipants : [ParticipantData]?
+    var searchController = UISearchController(searchResultsController: nil)
 
-    override func viewDidLoad() {
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        MainModule.sharedInstance.registerParticipantDataFetchListener(self)
+        //
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        //
     }
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return MainModule.sharedInstance.participantData!.count
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        if let dataSource = filteredParticipants {
+            return dataSource.count
+        }
+        return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ParticipantCell", forIndexPath: indexPath)
-        //
-        let participant = MainModule.sharedInstance.participantData![indexPath.row]
-        cell.textLabel?.text = participant.name
-
-        cell.detailTextLabel?.text = participant.email
-        
-        if cell.imageView?.image == nil, let imgURL = participant.picurl {
-            cell.imageView?.image = UIImage()
-            getNewsImageForCell(imgURL, cellForRowAtIndexPath: indexPath)
-        }
- 
-        //
-
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ParticipantCell", forIndexPath: indexPath) as! ParticipantTableViewCell
+        cell.participantData = filteredParticipants![indexPath.row]
         return cell
     }
     
-    
-    //
-    func getNewsImageForCell(urlString: String, cellForRowAtIndexPath indexPath: NSIndexPath) {
-        var image: UIImage?
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            image =  UIImage(data: NSData(contentsOfURL: NSURL(string:urlString)!)!)
-            dispatch_async(dispatch_get_main_queue()) {
-                let cell = self.tableView.dequeueReusableCellWithIdentifier("ParticipantCell",forIndexPath: indexPath)
-                cell.imageView?.image = image
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
-            }
+    //MARK: - Searching
+    func filterContentForSearchText(searchText: String, scope: String = "All")
+    {
+        if searchText.characters.count > 0
+        {
+            filteredParticipants = MainModule.sharedInstance.participantData!.filter
+                { participant in
+                    return participant.name.lowercaseString.containsString(searchText.lowercaseString)
+                }
         }
+        else
+        {
+            filteredParticipants = MainModule.sharedInstance.participantData
+        }
+        tableView.reloadData()
     }
-    //
+        
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
     
+    //MARK: -
+    func participantsFetched(err: NSError?)
+    {
+        filteredParticipants = MainModule.sharedInstance.participantData
+        tableView.reloadData()
+    }
 
+    @IBAction func borrowButtonTouchUpInside(sender: UIButton)
+    {
+        self.performSegueWithIdentifier("qr_code_reader", sender: self)
+
+    }
 
 }

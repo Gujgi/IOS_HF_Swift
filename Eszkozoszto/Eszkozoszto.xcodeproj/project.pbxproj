@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E22E5C681C0F19CC00B1AF81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C671C0F19CC00B1AF81 /* AppDelegate.swift */; };
 		E22E5C6D1C0F19CC00B1AF81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C6B1C0F19CC00B1AF81 /* Main.storyboard */; };
-		E22E5C701C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C6E1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld */; };
 		E22E5C721C0F19CC00B1AF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C711C0F19CC00B1AF81 /* Assets.xcassets */; };
 		E22E5C751C0F19CC00B1AF81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */; };
 		E22E5C801C0F19CC00B1AF81 /* EszkozosztoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */; };
@@ -18,10 +17,10 @@
 		E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EA1C1F80E4004B5449 /* MainModule.swift */; };
 		E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EC1C1F81C0004B5449 /* MainViewController.swift */; };
 		E234E1EF1C2073B0004B5449 /* ParticipantListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */; };
-		E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */; };
-		E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E791C17578B0064C981 /* ParticipantList.swift */; };
-		E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */; };
-		E2A08E7F1C17578B0064C981 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A08E7B1C17578B0064C981 /* Participant.swift */; };
+		E27FFA381C20C30600874164 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FFA371C20C30600874164 /* ImageLoader.swift */; };
+		E27FFA3A1C20C98B00874164 /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FFA391C20C98B00874164 /* ParticipantTableViewCell.swift */; };
+		E27FFA3C1C21F3B300874164 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FFA3B1C21F3B300874164 /* BorrowViewController.swift */; };
+		E27FFA3E1C2216F400874164 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FFA3D1C2216F400874164 /* QRCodeReaderViewController.swift */; };
 		E2D7E02F1C1DC21700EF6D8D /* AppRootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E02E1C1DC21700EF6D8D /* AppRootNavigator.swift */; };
 		E2D7E0311C1DC2A700EF6D8D /* AppSessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E0301C1DC2A700EF6D8D /* AppSessionHandler.swift */; };
 		E2D7E0351C1DCC1F00EF6D8D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7E0341C1DCC1F00EF6D8D /* SwiftyJSON.swift */; };
@@ -50,7 +49,6 @@
 		E22E5C641C0F19CC00B1AF81 /* Eszkozoszto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eszkozoszto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22E5C671C0F19CC00B1AF81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22E5C6C1C0F19CC00B1AF81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E22E5C6F1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Eszkozoszto.xcdatamodel; sourceTree = "<group>"; };
 		E22E5C711C0F19CC00B1AF81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22E5C741C0F19CC00B1AF81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22E5C761C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,10 +62,10 @@
 		E234E1EA1C1F80E4004B5449 /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		E234E1EC1C1F81C0004B5449 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantListTableViewController.swift; sourceTree = "<group>"; };
-		E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ParticipantList+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E2A08E791C17578B0064C981 /* ParticipantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantList.swift; sourceTree = "<group>"; };
-		E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Participant+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E2A08E7B1C17578B0064C981 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
+		E27FFA371C20C30600874164 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E27FFA391C20C98B00874164 /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		E27FFA3B1C21F3B300874164 /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		E27FFA3D1C2216F400874164 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
 		E2D7E02E1C1DC21700EF6D8D /* AppRootNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRootNavigator.swift; sourceTree = "<group>"; };
 		E2D7E0301C1DC2A700EF6D8D /* AppSessionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSessionHandler.swift; sourceTree = "<group>"; };
 		E2D7E0341C1DCC1F00EF6D8D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -103,10 +101,6 @@
 		E22E5C5B1C0F19CC00B1AF81 = {
 			isa = PBXGroup;
 			children = (
-				E2A08E781C17578B0064C981 /* ParticipantList+CoreDataProperties.swift */,
-				E2A08E791C17578B0064C981 /* ParticipantList.swift */,
-				E2A08E7A1C17578B0064C981 /* Participant+CoreDataProperties.swift */,
-				E2A08E7B1C17578B0064C981 /* Participant.swift */,
 				E22E5C661C0F19CC00B1AF81 /* Eszkozoszto */,
 				E22E5C7E1C0F19CC00B1AF81 /* EszkozosztoTests */,
 				E22E5C891C0F19CC00B1AF81 /* EszkozosztoUITests */,
@@ -161,8 +155,19 @@
 				E234E1EC1C1F81C0004B5449 /* MainViewController.swift */,
 				E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */,
 				E234E1EE1C2073B0004B5449 /* ParticipantListTableViewController.swift */,
+				E27FFA391C20C98B00874164 /* ParticipantTableViewCell.swift */,
+				E27FFA3B1C21F3B300874164 /* BorrowViewController.swift */,
+				E27FFA3D1C2216F400874164 /* QRCodeReaderViewController.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		E27FFA361C20C2F200874164 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E27FFA371C20C30600874164 /* ImageLoader.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		E2D7E02B1C1DBFD400EF6D8D /* Utils */ = {
@@ -176,10 +181,10 @@
 		E2D7E02C1C1DBFDD00EF6D8D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E27FFA361C20C2F200874164 /* Network */,
 				E234E1EA1C1F80E4004B5449 /* MainModule.swift */,
 				E2D7E02E1C1DC21700EF6D8D /* AppRootNavigator.swift */,
 				E2D7E0301C1DC2A700EF6D8D /* AppSessionHandler.swift */,
-				E22E5C6E1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				TargetAttributes = {
 					E22E5C631C0F19CC00B1AF81 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4S7454RLBB;
 					};
 					E22E5C7A1C0F19CC00B1AF81 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -352,17 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22E5C701C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld in Sources */,
+				E27FFA3E1C2216F400874164 /* QRCodeReaderViewController.swift in Sources */,
 				E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */,
+				E27FFA381C20C30600874164 /* ImageLoader.swift in Sources */,
 				E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */,
 				E234E1EF1C2073B0004B5449 /* ParticipantListTableViewController.swift in Sources */,
 				E2D7E02F1C1DC21700EF6D8D /* AppRootNavigator.swift in Sources */,
-				E2A08E7E1C17578B0064C981 /* Participant+CoreDataProperties.swift in Sources */,
 				E2D7E0351C1DCC1F00EF6D8D /* SwiftyJSON.swift in Sources */,
-				E2A08E7C1C17578B0064C981 /* ParticipantList+CoreDataProperties.swift in Sources */,
-				E2A08E7F1C17578B0064C981 /* Participant.swift in Sources */,
+				E27FFA3C1C21F3B300874164 /* BorrowViewController.swift in Sources */,
 				E2D7E0311C1DC2A700EF6D8D /* AppSessionHandler.swift in Sources */,
-				E2A08E7D1C17578B0064C981 /* ParticipantList.swift in Sources */,
+				E27FFA3A1C20C98B00874164 /* ParticipantTableViewCell.swift in Sources */,
 				E2D7E03B1C1DD78F00EF6D8D /* LoginViewController.swift in Sources */,
 				E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */,
 				E22E5C681C0F19CC00B1AF81 /* AppDelegate.swift in Sources */,
@@ -507,10 +512,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Eszkozoszto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GA.Eszkozoszto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -518,10 +526,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Eszkozoszto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GA.Eszkozoszto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -613,19 +624,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		E22E5C6E1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E22E5C6F1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodel */,
-			);
-			currentVersion = E22E5C6F1C0F19CC00B1AF81 /* Eszkozoszto.xcdatamodel */;
-			path = Eszkozoszto.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = E22E5C5C1C0F19CC00B1AF81 /* Project object */;
 }
