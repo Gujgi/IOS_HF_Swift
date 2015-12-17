@@ -55,7 +55,12 @@ class ParticipantListTableViewController: UITableViewController, UISearchResults
         {
             filteredParticipants = MainModule.sharedInstance.participantData!.filter
                 { participant in
+                    if participant.deviceId != nil
+                    {
+                        return participant.deviceId!.lowercaseString.containsString(searchText.lowercaseString)
+                    }
                     return participant.name.lowercaseString.containsString(searchText.lowercaseString)
+
                 }
         }
         else
