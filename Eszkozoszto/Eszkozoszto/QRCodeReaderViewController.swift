@@ -61,6 +61,7 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
         objCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: objCaptureSession)
         objCaptureVideoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         objCaptureVideoPreviewLayer?.frame = view.layer.bounds
+        //view.translatesAutoresizingMaskIntoConstraints = false
         self.view.layer.addSublayer(objCaptureVideoPreviewLayer!)
         objCaptureSession?.startRunning()
     }

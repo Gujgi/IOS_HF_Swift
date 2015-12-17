@@ -10,11 +10,12 @@ import UIKit
 
 class ParticipantTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var workplaceLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var participantImageView: UIImageView!
+    @IBOutlet weak var deviceIDLabel: UILabel!
     @IBOutlet weak var borrowButton: UIButton!
+    @IBOutlet weak var returnButton: UIButton!
     
     var participantData : ParticipantData?
     {
@@ -24,8 +25,9 @@ class ParticipantTableViewCell: UITableViewCell {
             {
                 nameLabel.text = data.name
                 emailLabel.text = data.email
-                workplaceLabel.text = data.workplace
+                deviceIDLabel.text = data.deviceId
                 borrowButton.enabled = (data.deviceId == nil) && data.hasRight!
+                returnButton.enabled = !(data.deviceId == nil)
 
             
                 if let imgURL = data.picurl
@@ -47,6 +49,12 @@ class ParticipantTableViewCell: UITableViewCell {
     @IBAction func borrowButtonTouchUpInside(sender: UIButton)
     {
         MainModule.sharedInstance.selectedParticipant = participantData
+    }
+    @IBAction func returnButtonTouchUpInside(sender: AnyObject)
+    {
+        MainModule.sharedInstance.selectedParticipant = participantData
+        MainModule.sharedInstance.selectedParticipant?.deviceId = nil
+        MainModule.sharedInstance.saveBorrowProcess()
     }
 
 }

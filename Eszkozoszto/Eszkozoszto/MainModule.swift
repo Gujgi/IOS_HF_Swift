@@ -50,12 +50,12 @@ struct ParticipantData
         //TODO: -
     }
     
-    init(withName name : String, right : Bool, picurl : String?)
+    init(withName name : String, right : Bool, picurl : String?, email : String?)
     {
         self.id = name
         self.name = name
         self.hasRight = right
-        self.email = "TODO"
+        self.email = email
         self.workplace = "TODO"
         self.deviceId = nil
         self.picurl = picurl
@@ -118,9 +118,9 @@ class MainModule: NSObject {
     func fetchParticipantList()
     {
         //TODO: - get the participant list, parse into ParticipantData
-        let testData = [ParticipantData(withName: "Bob", right: false, picurl: nil),
-            ParticipantData(withName: "Stuart", right: false, picurl: nil),
-            ParticipantData(withName: "Kevin", right: true, picurl: "https://s-media-cache-ak0.pinimg.com/736x/7d/97/33/7d973320534102e257a1583a7dd791f7.jpg")]
+        let testData = [ParticipantData(withName: "Bob", right: false, picurl: nil, email: "bob@gmail.com"),
+            ParticipantData(withName: "Stuart", right: false, picurl: nil, email: nil),
+            ParticipantData(withName: "Kevin", right: true, picurl: "https://s-media-cache-ak0.pinimg.com/736x/7d/97/33/7d973320534102e257a1583a7dd791f7.jpg", email: "kevin@gmail.com")]
         //
         participantData = testData
     }

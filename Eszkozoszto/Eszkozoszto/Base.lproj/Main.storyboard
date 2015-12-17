@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Résztvevők-->
@@ -43,6 +42,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-e3-QO7">
+                                            <rect key="frame" x="543" y="18" width="49" height="30"/>
+                                            <animations/>
+                                            <state key="normal" title="Borrow"/>
+                                            <connections>
+                                                <action selector="borrowButtonTouchUpInside:" destination="RGH-BD-N0L" eventType="touchUpInside" id="3Pc-ra-TRR"/>
+                                                <action selector="borrowButtonTouchUpInside:" destination="eKp-8K-d5j" eventType="touchUpInside" id="48w-zG-Qkt"/>
+                                            </connections>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipe-uh-4FS">
                                             <rect key="frame" x="107" y="80" width="431" height="21"/>
                                             <animations/>
@@ -54,13 +62,12 @@
                                             <rect key="frame" x="8" y="6" width="84" height="102"/>
                                             <animations/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-e3-QO7">
-                                            <rect key="frame" x="543" y="42" width="49" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-yF-Wbh">
+                                            <rect key="frame" x="546" y="62" width="46" height="30"/>
                                             <animations/>
-                                            <state key="normal" title="Borrow"/>
+                                            <state key="normal" title="Return"/>
                                             <connections>
-                                                <action selector="borrowButtonTouchUpInside:" destination="RGH-BD-N0L" eventType="touchUpInside" id="3Pc-ra-TRR"/>
-                                                <action selector="borrowButtonTouchUpInside:" destination="eKp-8K-d5j" eventType="touchUpInside" id="48w-zG-Qkt"/>
+                                                <action selector="returnButtonTouchUpInside:" destination="RGH-BD-N0L" eventType="touchUpInside" id="uWy-1o-4KS"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -69,10 +76,11 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="borrowButton" destination="lHo-e3-QO7" id="sPD-DN-ThK"/>
+                                    <outlet property="deviceIDLabel" destination="Ipe-uh-4FS" id="TnB-XQ-GPt"/>
                                     <outlet property="emailLabel" destination="HTq-t7-aWi" id="FCG-lq-7an"/>
                                     <outlet property="nameLabel" destination="eBM-wY-RG1" id="MfV-lm-OCB"/>
                                     <outlet property="participantImageView" destination="VgJ-dc-Fqk" id="UZ6-n0-cgW"/>
-                                    <outlet property="workplaceLabel" destination="Ipe-uh-4FS" id="CYv-wa-0Zg"/>
+                                    <outlet property="returnButton" destination="PDR-yF-Wbh" id="Wv1-F8-yPf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,10 +182,13 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQi-0d-Sw9">
-                                <rect key="frame" x="80" y="80" width="440" height="440"/>
+                                <rect key="frame" x="137" y="20" width="327" height="250"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CQi-0d-Sw9" secondAttribute="height" multiplier="1:1" id="OuG-WM-tPb"/>
+                                    <constraint firstAttribute="height" constant="250" id="FgY-9W-WtY"/>
+                                    <constraint firstAttribute="width" constant="327" id="Hzb-Kc-o9D"/>
+                                    <constraint firstAttribute="height" constant="250" id="XSh-dh-vbF"/>
+                                    <constraint firstAttribute="width" constant="327" id="kCr-cU-3HJ"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="jiD-VP-rU3" kind="embed" identifier="QR_reader_embed" id="aPe-vZ-5Nr"/>
@@ -187,13 +198,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="1ul-kR-XWF"/>
                             <constraint firstItem="R6z-D1-eys" firstAttribute="top" secondItem="iAk-w4-UZ0" secondAttribute="bottom" constant="78" id="45E-VN-iad"/>
+                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="top" secondItem="99m-aP-EcI" secondAttribute="bottom" constant="20" id="5aK-8i-Zw4"/>
                             <constraint firstItem="R6z-D1-eys" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="G3p-25-SW7"/>
-                            <constraint firstAttribute="trailing" secondItem="CQi-0d-Sw9" secondAttribute="trailing" constant="80" id="K88-0S-EDO"/>
-                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="top" secondItem="99m-aP-EcI" secondAttribute="bottom" constant="80" id="NIj-pB-Osb"/>
                             <constraint firstItem="iAk-w4-UZ0" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="dMo-hR-gad"/>
                             <constraint firstItem="8qO-Sq-U4Y" firstAttribute="top" secondItem="R6z-D1-eys" secondAttribute="bottom" constant="55" id="hBD-1r-QAc"/>
-                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="leading" secondItem="h8v-LY-cx8" secondAttribute="leading" constant="80" id="rBG-YE-L0f"/>
+                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="hhP-fo-1Sg"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -280,7 +291,7 @@
             <objects>
                 <viewController id="jiD-VP-rU3" customClass="QRCodeReaderViewController" customModule="Eszkozoszto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ID-nz-6Zp">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="440"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceE-jZ-LIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607" y="-183"/>
+            <point key="canvasLocation" x="2730" y="-183"/>
         </scene>
     </scenes>
 </document>
