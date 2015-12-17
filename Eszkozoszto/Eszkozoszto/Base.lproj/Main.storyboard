@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Résztvevők-->
@@ -42,8 +43,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-e3-QO7">
-                                            <rect key="frame" x="543" y="18" width="49" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-e3-QO7">
+                                            <rect key="frame" x="523" y="18" width="49" height="30"/>
                                             <animations/>
                                             <state key="normal" title="Borrow"/>
                                             <connections>
@@ -62,8 +63,8 @@
                                             <rect key="frame" x="8" y="6" width="84" height="102"/>
                                             <animations/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-yF-Wbh">
-                                            <rect key="frame" x="546" y="62" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-yF-Wbh">
+                                            <rect key="frame" x="526" y="62" width="46" height="30"/>
                                             <animations/>
                                             <state key="normal" title="Return"/>
                                             <connections>
@@ -72,6 +73,12 @@
                                         </button>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="lHo-e3-QO7" firstAttribute="top" secondItem="sFz-IL-o0R" secondAttribute="topMargin" constant="10" id="ZPy-jP-qSl"/>
+                                        <constraint firstItem="PDR-yF-Wbh" firstAttribute="trailing" secondItem="sFz-IL-o0R" secondAttribute="trailingMargin" constant="-20" id="avi-JS-Mre"/>
+                                        <constraint firstItem="lHo-e3-QO7" firstAttribute="trailing" secondItem="sFz-IL-o0R" secondAttribute="trailingMargin" constant="-20" id="cy8-iQ-MPx"/>
+                                        <constraint firstItem="PDR-yF-Wbh" firstAttribute="top" secondItem="lHo-e3-QO7" secondAttribute="bottom" constant="14" id="s52-v5-8hl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
@@ -290,6 +297,10 @@
         <scene sceneID="qmR-fC-gam">
             <objects>
                 <viewController id="jiD-VP-rU3" customClass="QRCodeReaderViewController" customModule="Eszkozoszto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ZP-GB-Xa0"/>
+                        <viewControllerLayoutGuide type="bottom" id="NxD-vz-JUV"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6ID-nz-6Zp">
                         <rect key="frame" x="0.0" y="0.0" width="327" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

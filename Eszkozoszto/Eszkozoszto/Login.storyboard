@@ -18,22 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyj-Uq-YqM">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <rect key="frame" x="140" y="235" width="320" height="130"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USW-Ob-CST">
-                                        <rect key="frame" x="30" y="8" width="180" height="30"/>
+                                        <rect key="frame" x="30" y="15" width="260" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFC-Kh-q01">
-                                        <rect key="frame" x="30" y="49" width="180" height="30"/>
+                                        <rect key="frame" x="30" y="56" width="260" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWY-1T-iGS">
-                                        <rect key="frame" x="101" y="98" width="38" height="30"/>
+                                        <rect key="frame" x="141" y="100" width="38" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -47,11 +47,11 @@
                                     <constraint firstItem="gFC-Kh-q01" firstAttribute="leading" secondItem="kyj-Uq-YqM" secondAttribute="leading" constant="30" id="1p6-Xv-wy2"/>
                                     <constraint firstItem="rWY-1T-iGS" firstAttribute="centerX" secondItem="kyj-Uq-YqM" secondAttribute="centerX" id="CkR-Sa-4cf"/>
                                     <constraint firstAttribute="trailing" secondItem="USW-Ob-CST" secondAttribute="trailing" constant="30" id="D95-RQ-20Z"/>
-                                    <constraint firstAttribute="height" constant="128" id="MmB-8E-HWm"/>
+                                    <constraint firstAttribute="height" constant="130" id="MmB-8E-HWm"/>
                                     <constraint firstAttribute="bottom" secondItem="rWY-1T-iGS" secondAttribute="bottom" id="NXI-Ew-rqh"/>
                                     <constraint firstItem="USW-Ob-CST" firstAttribute="centerX" secondItem="kyj-Uq-YqM" secondAttribute="centerX" id="VxR-b1-PYd"/>
-                                    <constraint firstItem="USW-Ob-CST" firstAttribute="top" secondItem="kyj-Uq-YqM" secondAttribute="top" constant="8" id="X6D-0J-9II"/>
-                                    <constraint firstAttribute="width" constant="240" id="jpu-um-AL3"/>
+                                    <constraint firstItem="USW-Ob-CST" firstAttribute="top" secondItem="kyj-Uq-YqM" secondAttribute="top" constant="15" id="X6D-0J-9II"/>
+                                    <constraint firstAttribute="width" constant="320" id="jpu-um-AL3"/>
                                     <constraint firstItem="gFC-Kh-q01" firstAttribute="centerX" secondItem="kyj-Uq-YqM" secondAttribute="centerX" id="nEp-gs-B2y"/>
                                     <constraint firstItem="gFC-Kh-q01" firstAttribute="top" secondItem="USW-Ob-CST" secondAttribute="bottom" constant="11" id="qSB-YR-tWg"/>
                                     <constraint firstAttribute="trailing" secondItem="gFC-Kh-q01" secondAttribute="trailing" constant="30" id="v3w-cU-35e"/>
@@ -64,7 +64,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxq-bW-bvG">
-                                <rect key="frame" x="258" y="207" width="84" height="21"/>
+                                <rect key="frame" x="258" y="206" width="84" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

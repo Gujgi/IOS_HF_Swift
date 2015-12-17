@@ -28,10 +28,10 @@ class ImageLoader: NSObject {
             {
                 image =  UIImage(data: imgData)
                 
-                //Cache
+                /*Cache
                 let imageData = UIImagePNGRepresentation(image!)
                 NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: urlString)
-                //
+                */
                 dispatch_async(dispatch_get_main_queue()) {
                     done(nil, image)
                 }

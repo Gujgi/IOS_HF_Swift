@@ -83,8 +83,11 @@ class MainModule: NSObject {
     func getEventsListWithCompletion(done: ((NSError?, [ConferenceEventData]?) -> Void)) {
         
         //TODO: - get the events list, parse into ConferenceEventData
-        let testData = [ConferenceEventData(withName: "János egy sith lovag leleplezése"),
-            ConferenceEventData(withName: "Károly a triceratropsz elesik")]
+        let testData = [ConferenceEventData(withName: "Conference 1"),
+            ConferenceEventData(withName: "Conference 2"),
+            ConferenceEventData(withName: "Conference 3"),
+            ConferenceEventData(withName: "Conference 4"),
+            ConferenceEventData(withName: "Conference 5")]
         //
         eventData = testData
         done(nil, testData)
@@ -118,9 +121,15 @@ class MainModule: NSObject {
     func fetchParticipantList()
     {
         //TODO: - get the participant list, parse into ParticipantData
-        let testData = [ParticipantData(withName: "Bob", right: false, picurl: nil, email: "bob@gmail.com"),
-            ParticipantData(withName: "Stuart", right: false, picurl: nil, email: nil),
-            ParticipantData(withName: "Kevin", right: true, picurl: "https://s-media-cache-ak0.pinimg.com/736x/7d/97/33/7d973320534102e257a1583a7dd791f7.jpg", email: "kevin@gmail.com")]
+        let testData = [ParticipantData(withName: "Bob", right: false, picurl: "https://cdn2.iconfinder.com/data/icons/despicable-me-2-minions/128/Minion-reading-icon.png", email: "bob@gmail.com"),
+            ParticipantData(withName: "Stuart", right: false, picurl: "https://yt3.ggpht.com/-C2UPftnYDQk/AAAAAAAAAAI/AAAAAAAAAAA/AGSr55zL_Rg/s900-c-k-no/photo.jpg", email: nil),
+            ParticipantData(withName: "Kevin", right: true, picurl: "https://s-media-cache-ak0.pinimg.com/736x/7d/97/33/7d973320534102e257a1583a7dd791f7.jpg", email: "kevin@gmail.com"),
+            ParticipantData(withName: "Dave", right: true, picurl: "https://cdn2.iconfinder.com/data/icons/despicable-me-2-minions/128/superman-minion-icon.png", email: "dave@gmail.com"),
+            ParticipantData(withName: "Jerry", right: true, picurl: "https://s-media-cache-ak0.pinimg.com/736x/29/39/00/2939002bbe6d787c7a2f38cc8ebad84f.jpg", email: nil),
+            ParticipantData(withName: "Jorge", right: false, picurl: "https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAJpAAAAJGIyODZjZDI5LWVkODEtNDIwMC1hMjAwLWVlNDg4MmYxYmE3Mg.jpg", email: "jorge@gmail.com"),
+            ParticipantData(withName: "Tim", right: true, picurl: "https://cdn2.iconfinder.com/data/icons/despicable-me-2-minions/128/despicable-me-2-Minion-icon-1.png", email: "tim@yahoo.com"),
+            ParticipantData(withName: "Mark", right: false, picurl: "https://33.media.tumblr.com/avatar_8d5fdc9782c8_128.png", email: "mark@gmail.com"),
+            ParticipantData(withName: "Jon", right: true, picurl: "https://33.media.tumblr.com/avatar_c4f4a4858f16_128.png", email: "jon@gmail.com")]
         //
         participantData = testData
     }
