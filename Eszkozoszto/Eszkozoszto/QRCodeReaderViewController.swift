@@ -24,11 +24,14 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         self.configureVideoCapture()
         self.addVideoPreviewLayer()
         self.initializeQRView()
-        
     }
     
     
@@ -44,7 +47,7 @@ class QRCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjec
             objCaptureDeviceInput = nil
         }
         if (error != nil) {
-            let alertView:UIAlertView = UIAlertView(title: "Device Error", message:"Device not Supported for this Application", delegate: nil, cancelButtonTitle: "Ok Done")
+            let alertView: UIAlertView = UIAlertView(title: "Device Error", message:"Device not Supported for this Application", delegate: nil, cancelButtonTitle: "Ok Done")
             alertView.show()
             return
         }

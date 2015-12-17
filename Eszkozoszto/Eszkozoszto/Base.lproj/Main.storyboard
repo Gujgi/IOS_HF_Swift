@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -178,7 +179,7 @@
                                 <rect key="frame" x="261" y="607" width="79" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6z-D1-eys">
                                 <rect key="frame" x="285" y="715" width="30" height="30"/>
@@ -189,14 +190,23 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQi-0d-Sw9">
-                                <rect key="frame" x="137" y="20" width="327" height="250"/>
+                                <rect key="frame" x="70" y="20" width="460" height="460"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="FgY-9W-WtY"/>
                                     <constraint firstAttribute="width" constant="327" id="Hzb-Kc-o9D"/>
                                     <constraint firstAttribute="height" constant="250" id="XSh-dh-vbF"/>
+                                    <constraint firstAttribute="width" secondItem="CQi-0d-Sw9" secondAttribute="height" multiplier="1:1" id="cEw-8n-kzs"/>
                                     <constraint firstAttribute="width" constant="327" id="kCr-cU-3HJ"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FgY-9W-WtY"/>
+                                        <exclude reference="Hzb-Kc-o9D"/>
+                                        <exclude reference="XSh-dh-vbF"/>
+                                        <exclude reference="kCr-cU-3HJ"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="jiD-VP-rU3" kind="embed" identifier="QR_reader_embed" id="aPe-vZ-5Nr"/>
                                 </connections>
@@ -208,11 +218,18 @@
                             <constraint firstItem="CQi-0d-Sw9" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="1ul-kR-XWF"/>
                             <constraint firstItem="R6z-D1-eys" firstAttribute="top" secondItem="iAk-w4-UZ0" secondAttribute="bottom" constant="78" id="45E-VN-iad"/>
                             <constraint firstItem="CQi-0d-Sw9" firstAttribute="top" secondItem="99m-aP-EcI" secondAttribute="bottom" constant="20" id="5aK-8i-Zw4"/>
+                            <constraint firstItem="CQi-0d-Sw9" firstAttribute="leading" secondItem="h8v-LY-cx8" secondAttribute="leadingMargin" constant="50" id="DJU-pq-IMc"/>
                             <constraint firstItem="R6z-D1-eys" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="G3p-25-SW7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CQi-0d-Sw9" secondAttribute="trailing" constant="50" id="af8-J4-aZH"/>
                             <constraint firstItem="iAk-w4-UZ0" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="dMo-hR-gad"/>
                             <constraint firstItem="8qO-Sq-U4Y" firstAttribute="top" secondItem="R6z-D1-eys" secondAttribute="bottom" constant="55" id="hBD-1r-QAc"/>
                             <constraint firstItem="CQi-0d-Sw9" firstAttribute="centerX" secondItem="h8v-LY-cx8" secondAttribute="centerX" id="hhP-fo-1Sg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hhP-fo-1Sg"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
@@ -302,7 +319,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NxD-vz-JUV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6ID-nz-6Zp">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

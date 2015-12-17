@@ -11,8 +11,6 @@
 		E22E5C6D1C0F19CC00B1AF81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C6B1C0F19CC00B1AF81 /* Main.storyboard */; };
 		E22E5C721C0F19CC00B1AF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C711C0F19CC00B1AF81 /* Assets.xcassets */; };
 		E22E5C751C0F19CC00B1AF81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22E5C731C0F19CC00B1AF81 /* LaunchScreen.storyboard */; };
-		E22E5C801C0F19CC00B1AF81 /* EszkozosztoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */; };
-		E22E5C8B1C0F19CC00B1AF81 /* EszkozosztoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */; };
 		E234E1E81C1F79AF004B5449 /* EventSelectorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */; };
 		E234E1EB1C1F80E4004B5449 /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EA1C1F80E4004B5449 /* MainModule.swift */; };
 		E234E1ED1C1F81C0004B5449 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234E1EC1C1F81C0004B5449 /* MainViewController.swift */; };
@@ -53,11 +51,7 @@
 		E22E5C741C0F19CC00B1AF81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22E5C761C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22E5C7B1C0F19CC00B1AF81 /* EszkozosztoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EszkozosztoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EszkozosztoTests.swift; sourceTree = "<group>"; };
-		E22E5C811C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E22E5C861C0F19CC00B1AF81 /* EszkozosztoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EszkozosztoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EszkozosztoUITests.swift; sourceTree = "<group>"; };
-		E22E5C8C1C0F19CC00B1AF81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E234E1E71C1F79AF004B5449 /* EventSelectorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSelectorTableViewController.swift; sourceTree = "<group>"; };
 		E234E1EA1C1F80E4004B5449 /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		E234E1EC1C1F81C0004B5449 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				E22E5C661C0F19CC00B1AF81 /* Eszkozoszto */,
-				E22E5C7E1C0F19CC00B1AF81 /* EszkozosztoTests */,
-				E22E5C891C0F19CC00B1AF81 /* EszkozosztoUITests */,
 				E22E5C651C0F19CC00B1AF81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,24 +120,6 @@
 				E2D7E0321C1DC2B300EF6D8D /* Resourses */,
 			);
 			path = Eszkozoszto;
-			sourceTree = "<group>";
-		};
-		E22E5C7E1C0F19CC00B1AF81 /* EszkozosztoTests */ = {
-			isa = PBXGroup;
-			children = (
-				E22E5C7F1C0F19CC00B1AF81 /* EszkozosztoTests.swift */,
-				E22E5C811C0F19CC00B1AF81 /* Info.plist */,
-			);
-			path = EszkozosztoTests;
-			sourceTree = "<group>";
-		};
-		E22E5C891C0F19CC00B1AF81 /* EszkozosztoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E22E5C8A1C0F19CC00B1AF81 /* EszkozosztoUITests.swift */,
-				E22E5C8C1C0F19CC00B1AF81 /* Info.plist */,
-			);
-			path = EszkozosztoUITests;
 			sourceTree = "<group>";
 		};
 		E234E1E91C1F7DEC004B5449 /* Main */ = {
@@ -378,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22E5C801C0F19CC00B1AF81 /* EszkozosztoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +359,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22E5C8B1C0F19CC00B1AF81 /* EszkozosztoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
